@@ -21,6 +21,13 @@ public class ProductDAO {
 		return ProductDAO.products.toArray(new Product[ProductDAO.products.size()]);
 	}
 
+	public Product[] getProducts(String filter) {
+		return (Product[]) ProductDAO.products.stream().filter(product -> {
+			return product.getName().toLowerCase().contains(filter.toLowerCase().trim())
+					|| product.getDescription().toLowerCase().contains(filter.toLowerCase().trim());
+		}).toArray(Product[]::new);
+	}
+
 	public Optional<Product> getProduct(final int id) {
 		return ProductDAO.products.stream().filter(product -> product.getId() == id).findFirst();
 	}

@@ -1,8 +1,9 @@
 package br.com.robertodebarba.jersey_example_project;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-@XmlRootElement
+@JsonInclude(Include.NON_DEFAULT)
 public class Product {
 
 	private int id;

@@ -1,4 +1,4 @@
-package br.com.robertodebarba.jersey_example_project;
+package br.com.robertodebarba.jersey_example_project.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

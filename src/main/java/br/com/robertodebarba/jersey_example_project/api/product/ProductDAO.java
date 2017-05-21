@@ -1,4 +1,4 @@
-package br.com.robertodebarba.jersey_example_project;
+package br.com.robertodebarba.jersey_example_project.api.product;
 
 import java.util.ArrayList;
 import java.util.List;
